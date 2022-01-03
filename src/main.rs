@@ -27,23 +27,59 @@ impl Vertex {
     }
 }
 
-const YELLOW: [f32; 3] = [
-    1.0, 1.0, 0.0
-];
+const YELLOW: [f32; 3] = [1.0, 1.0, 0.0];
+const BLACK: [f32; 3] = [0.0, 0.0, 0.0];
+// const GLASS: [f32; 3] = [1.0, 1.0, 1.0];
 
 const VERTICES: &[Vertex] = &[
-    Vertex { position: [-0.0868241, 0.49240386, 0.0], color: YELLOW }, // A
-    Vertex { position: [-0.49513406, 0.06958647, 0.0], color: YELLOW }, // B
-    Vertex { position: [-0.21918549, -0.44939706, 0.0], color: YELLOW }, // C
-    Vertex { position: [0.35966998, -0.3473291, 0.0], color: YELLOW }, // D
-    Vertex { position: [0.44147372, 0.2347359, 0.0], color: YELLOW }, // E
+    Vertex { position: [-0.2, 0.2, 0.0], color: YELLOW },
+    Vertex { position: [-0.25, 0.15, 0.0], color: YELLOW },
+    Vertex { position: [-0.3, 0.14, 0.0], color: YELLOW },
+    Vertex { position: [-0.3, 0.06, 0.0], color: YELLOW },
+    Vertex { position: [-0.28, 0.06, 0.0], color: YELLOW },
+    Vertex { position: [-0.27, 0.08, 0.0], color: YELLOW },
+    Vertex { position: [-0.25, 0.08, 0.0], color: YELLOW },
+    Vertex { position: [-0.24, 0.06, 0.0], color: YELLOW },
+    Vertex { position: [0.24, 0.06, 0.0], color: YELLOW },
+    Vertex { position: [0.25, 0.08, 0.0], color: YELLOW },
+    Vertex { position: [0.27, 0.08, 0.0], color: YELLOW },
+    Vertex { position: [0.28, 0.06, 0.0], color: YELLOW },
+    Vertex { position: [0.3, 0.06, 0.0], color: YELLOW },
+    Vertex { position: [0.3, 0.14, 0.0], color: YELLOW },
+    Vertex { position: [0.25, 0.15, 0.0], color: YELLOW },
+    Vertex { position: [0.2, 0.2, 0.0], color: YELLOW },
+    Vertex { position: [-0.3, 0.09, 0.0], color: BLACK },
+    Vertex { position: [-0.32, 0.09, 0.0], color: BLACK },
+    Vertex { position: [-0.32, 0.07, 0.0], color: BLACK },
+    Vertex { position: [-0.3, 0.07, 0.0], color: BLACK },
+    Vertex { position: [0.32, 0.09, 0.0], color: BLACK },
+    Vertex { position: [0.3, 0.09, 0.0], color: BLACK },
+    Vertex { position: [0.3, 0.07, 0.0], color: BLACK },
+    Vertex { position: [0.32, 0.07, 0.0], color: BLACK },
 ];
 
 const INDICES: &[u16] = &[
-    0, 1, 4,
-    1, 2, 4,
+    0, 1, 15, // Top of car
+    15, 1, 14, // Top of car continued
+    1, 2, 3,
     2, 3, 4,
-    /* padding */ 0,
+    3, 4, 5,
+    2, 4, 5,
+    2, 5, 6,
+    1, 2, 6,
+    1, 6, 7,
+    1, 7, 8,
+    1, 8, 14,
+    14, 8, 9,
+    14, 9, 10,
+    14, 10, 13,
+    13, 10, 11,
+    13, 11, 12,
+    16, 17, 18, // Front bumper
+    16, 18, 19, // Front bumper continued
+    20, 21, 22, // Rear bumper
+    20, 22, 23, // Rear bumper continued
+    // /* padding */ 0,
 ];
  
 struct State {

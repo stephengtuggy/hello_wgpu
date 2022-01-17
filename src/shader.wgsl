@@ -12,7 +12,7 @@ struct VertexOutput {
 
 [[stage(vertex)]]
 fn vs_main(
-    model: VertexInput,
+    model: VertexInput
 ) -> VertexOutput {
     var out: VertexOutput;
     out.color = model.color;

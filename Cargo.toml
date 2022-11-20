@@ -1,16 +1,16 @@
 [package]
 name = "hello_wgpu"
-version = "0.2.0"
+version = "0.2.1"
 edition = "2021"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
-image = "0.24.3"
-winit = "0.27.2"
-cgmath = "0.18"
-env_logger = "0.9"
+image = "0.24.5"
+winit = "0.27.5"
+cgmath = "0.18.0"
+env_logger = "0.9.3"
 log = "0.4.17"
-wgpu = "0.13.1"
+wgpu = "0.14.0"
 pollster = "0.2.5"
-bytemuck = { version = "1.12.1", features = [ "derive" ] }
+bytemuck = { version = "1.12.3", features = [ "derive" ] }

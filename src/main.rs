@@ -1,4 +1,5 @@
 use std::iter;
+use wgpu::CompositeAlphaMode;
 
 use winit::{
     event::*,
@@ -125,6 +126,7 @@ impl State {
             width: size.width,
             height: size.height,
             present_mode: wgpu::PresentMode::Fifo,
+            alpha_mode: CompositeAlphaMode::Opaque,
         };
         surface.configure(&device, &config);
 

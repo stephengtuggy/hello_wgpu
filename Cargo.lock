@@ -783,7 +783,7 @@ dependencies = [
 
 [[package]]
 name = "hello_wgpu"
-version = "0.2.1"
+version = "0.2.2"
 dependencies = [
  "bytemuck",
  "cgmath",
